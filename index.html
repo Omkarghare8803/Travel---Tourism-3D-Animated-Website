@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="AeroVista - Premium Travel Experience. Explore the world's most breathtaking destinations with luxury comfort and style.">
+    <meta name="keywords" content="travel, tourism, luxury travel, destinations, packages, tours">
+    <meta name="author" content="AeroVista Travel">
+    <meta name="theme-color" content="#0a0e17">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AeroVista">
+    <meta name="msapplication-TileColor" content="#d4af37">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    
+    <title>AeroVista | Premium Travel Experience</title>
+    
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Icons -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23d4af37' width='180' height='180'/><text x='50%' y='50%' font-size='80' fill='%230a0e17' text-anchor='middle' dominant-baseline='central' font-family='Arial, sans-serif' font-weight='bold'>A</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://randomuser.me">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.4.0/css/all.min.css">
+    
+    <!-- Fallback Font Awesome if CDN fails -->
+    <script>
+        if (!window.FontAwesome) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+            document.head.appendChild(link);
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Loader -->
+    <div class="loader">
+        <div class="plane-loader">
+            <i class="fa-solid fa-plane"></i>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">AeroVista<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#blogs">Travel Blogs</a></li>
+            <li><a href="#why-choose">Why Choose Us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="nav-btn-mobile">
+                <button class="btn-primary">Sign In</button>
+            </li>
+        </ul>
+        <div class="nav-btn-desktop">
+            <button class="btn-primary">Sign In</button>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Explore the <span class="highlight">Unseen</span></h1>
+            <p class="hero-subtitle">Experience the world's most breathtaking destinations with premium comfort and style.</p>
+            <div class="hero-btns">
+                <button class="btn-primary glow">Start Journey</button>
+                <button class="btn-secondary">View Packages</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-illustrator-wrapper">
+                <img src="images/Hero.png" alt="3D Hero Illustrator" class="hero-illustrator">
+                <div class="illustrator-glow"></div>
+                <div class="illustrator-particles"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="mouse"></div>
+        </div>
+
+    </section>
+
+    <!-- Booking Form Section (Overlapping Hero) -->
+    <section id="booking-preview" class="booking-preview">
+        <div class="booking-container glass-morphism">
+            <div class="booking-tabs">
+                <button class="tab active" data-tab="flight"><i class="fa-solid fa-plane-departure"></i> Flight</button>
+                <button class="tab" data-tab="hotel"><i class="fa-solid fa-hotel"></i> Hotel</button>
+            </div>
+            <form class="booking-form active" id="flight-form">
+                <div class="input-group">
+                    <label>From</label>
+                    <input type="text" placeholder="New York (JFK)">
+                </div>
+                <div class="input-group">
+                    <label>To</label>
+                    <input type="text" placeholder="Paris (CDG)">
+                </div>
+                <div class="input-group">
+                    <label>Date</label>
+                    <input type="date">
+                </div>
+                <div class="input-group">
+                    <label>Passengers</label>
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="destinations section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Popular Destinations</h2>
+            <p class="section-desc">Curated selection of the most visited places this season.</p>
+        </div>
+        <div class="destinations-grid">
+            <!-- Cards will be injected or hardcoded -->
+            <div class="dest-card" data-tilt>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-info">
+                    <h3>Paris, France</h3>
+                    <p>The City of Lights</p>
+                    <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                </div>
+            </div>
+            <div class="dest-card" data-tilt>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-info">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Tropical Paradise</p>
+                    <div class="rating"><i class="fa-solid fa-star"></i> 4.8</div>
+                </div>
+            </div>
+            <div class="dest-card" data-tilt>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-info">
+                    <h3>Venice, Italy</h3>
+                    <p>Floating City</p>
+                    <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="parallax-bg" style="background-image: url('images/Parallax-Image.jpg');"></div>
+        <div class="parallax-content">
+            <h2>Adventure Awaits</h2>
+            <p>Discover the unknown with our exclusive adventure packages.</p>
+            <button class="btn-outline">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="packages section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Exclusive Packages</h2>
+        </div>
+        <div class="packages-container">
+            <div class="package-card">
+                <div class="package-badge">Best Seller</div>
+                <h3>European Tour</h3>
+                <div class="price">$2,499</div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> 7 Days, 6 Nights</li>
+                    <li><i class="fa-solid fa-check"></i> 5 Star Hotel</li>
+                    <li><i class="fa-solid fa-check"></i> Breakfast Included</li>
+                    <li><i class="fa-solid fa-check"></i> Guided Tours</li>
+                </ul>
+                <button class="btn-primary full-width">Book Now</button>
+            </div>
+            <div class="package-card featured">
+                <div class="package-badge">Premium</div>
+                <h3>Maldives Honeymoon</h3>
+                <div class="price">$3,999</div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> 5 Days, 4 Nights</li>
+                    <li><i class="fa-solid fa-check"></i> Water Villa</li>
+                    <li><i class="fa-solid fa-check"></i> All Inclusive</li>
+                    <li><i class="fa-solid fa-check"></i> Private Yacht</li>
+                </ul>
+                <button class="btn-primary full-width">Book Now</button>
+            </div>
+            <div class="package-card">
+                <div class="package-badge">Economy</div>
+                <h3>Asian Delight</h3>
+                <div class="price">$1,299</div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> 6 Days, 5 Nights</li>
+                    <li><i class="fa-solid fa-check"></i> 4 Star Hotel</li>
+                    <li><i class="fa-solid fa-check"></i> Breakfast Included</li>
+                    <li><i class="fa-solid fa-check"></i> City Transport</li>
+                </ul>
+                <button class="btn-primary full-width">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Travel Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item item-1"><img src="Images/Gallery-Pic-1.jpg" alt="Beach"></div>
+            <div class="gallery-item item-2"><img src="Images/Gallery-Pic-2.jpg" alt="Mountain"></div>
+            <div class="gallery-item item-3"><img src="Images/Gallery-Pic-3.jpg" alt="Switzerland"></div>
+            <div class="gallery-item item-4"><img src="Images/Gallery-Pic-4.jpg" alt="Forest"></div>
+            <div class="gallery-item item-5"><img src="Images/Gallery-Pic-5.jpg" alt="Resort"></div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Traveler Reviews</h2>
+        </div>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="user-img"><img src="Images/Reviewer-1.jpg" alt="User"></div>
+                <div class="review-content">
+                    <p>"The best travel experience I've ever had. The service was impeccable and the destinations were breathtaking."</p>
+                    <h4>Sarah Johnson</h4>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="user-img"><img src="Images/Reviewer-2.jpg" alt="User"></div>
+                <div class="review-content">
+                    <p>"AeroVista made our honeymoon unforgettable. Every detail was taken care of. Highly recommended!"</p>
+                    <h4>Michael Brown</h4>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="user-img"><img src="Images/Reviewer-3.jpg" alt="User"></div>
+                <div class="review-content">
+                    <p>"Professional, luxurious, and worth every penny. I will definitely book with them again."</p>
+                    <h4>Emily Davis</h4>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Blogs -->
+    <section id="blogs" class="blogs section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Latest From Blog</h2>
+            <p class="section-desc">Explore travel tips, destination guides, and adventure stories.</p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img"><img src="Images/Blog-1.jpg" alt="Blog 1"></div>
+                <div class="blog-content">
+                    <span class="date">Oct 12, 2025</span>
+                    <h3>Top 10 Hidden Gems in Europe</h3>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img"><img src="Images/Blog-2.jpg" alt="Blog 2"></div>
+                <div class="blog-content">
+                    <span class="date">Oct 08, 2025</span>
+                    <h3>How to Travel on a Budget</h3>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img"><img src="Images/Blog-3.jpg" alt="Blog 3"></div>
+                <div class="blog-content">
+                    <span class="date">Sep 25, 2025</span>
+                    <h3>The Ultimate Packing Guide</h3>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose AeroVista</h2>
+            <p class="section-desc">Experience premium travel services with unmatched quality and comfort.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Award-Winning Service</h3>
+                <p>Recognized globally for our exceptional travel experiences and customer satisfaction.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Expert Travel Consultants</h3>
+                <p>Our experienced team provides personalized recommendations for your perfect journey.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-shield"></i></div>
+                <h3>Secure & Safe</h3>
+                <p>Your safety is our priority with comprehensive travel insurance and 24/7 support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <h3>Flexible Payments</h3>
+                <p>Multiple payment options with installment plans for your convenience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+                <h3>Global Network</h3>
+                <p>Partner with destinations worldwide for exclusive deals and authentic experiences.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer support to assist you anytime, anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="offers" class="special-offers section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Limited Time Offers</h2>
+            <p class="section-desc">Grab incredible deals and exclusive discounts on premium packages.</p>
+        </div>
+        <div class="offers-container">
+            <div class="offer-card">
+                <div class="offer-discount">-30%</div>
+                <div class="offer-label">Spring Escape</div>
+                <h3>Caribbean Cruise</h3>
+                <p class="original-price"><s>$5,999</s></p>
+                <p class="offer-price">$4,199</p>
+                <p class="offer-desc">5-night luxury cruise with all meals included</p>
+                <button class="btn-primary full-width">Claim Offer</button>
+                <p class="valid-until">Valid Until: December 31, 2025</p>
+            </div>
+            <div class="offer-card">
+                <div class="offer-discount">-25%</div>
+                <div class="offer-label">Early Bird</div>
+                <h3>Japan Adventure</h3>
+                <p class="original-price"><s>$3,499</s></p>
+                <p class="offer-price">$2,624</p>
+                <p class="offer-desc">10-day journey through Tokyo, Kyoto & Mount Fuji</p>
+                <button class="btn-primary full-width">Claim Offer</button>
+                <p class="valid-until">Valid Until: December 20, 2025</p>
+            </div>
+            <div class="offer-card">
+                <div class="offer-discount">-35%</div>
+                <div class="offer-label">Exclusive</div>
+                <h3>Iceland Explorer</h3>
+                <p class="original-price"><s>$2,799</s></p>
+                <p class="offer-price">$1,819</p>
+                <p class="offer-desc">8-day northern lights and glacier exploration</p>
+                <button class="btn-primary full-width">Claim Offer</button>
+                <p class="valid-until">Valid Until: January 15, 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <p class="section-desc">Dedicated professionals committed to making your travel dreams reality.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-image"><img src="Images/Team-Member-1.jpg" alt="Team Member"></div>
+                <div class="team-info">
+                    <h3>James Mitchell</h3>
+                    <p class="role">Travel Director</p>
+                    <p class="bio">15+ years of expertise in crafting unforgettable travel experiences.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image"><img src="Images/Team-Member-2.jpg" alt="Team Member"></div>
+                <div class="team-info">
+                    <h3>Emma Collins</h3>
+                    <p class="role">Lead Consultant</p>
+                    <p class="bio">Specialist in luxury destinations and personalized itineraries.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image"><img src="Images/Team-Member-3.jpg" alt="Team Member"></div>
+                <div class="team-info">
+                    <h3>David Kumar</h3>
+                    <p class="role">Adventure Coordinator</p>
+                    <p class="bio">Expert in adventure tours and off-the-beaten-path destinations.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-image"><img src="Images/Team-Member-4.jpg" alt="Team Member"></div>
+                <div class="team-info">
+                    <h3>Sophie Laurent</h3>
+                    <p class="role">Booking Manager</p>
+                    <p class="bio">Ensures smooth bookings and exceptional customer service.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-desc">Have questions? Our team is ready to help plan your next adventure.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-content">
+                        <h3>Visit Us</h3>
+                        <p>123 Travel Street<br>New York, NY 10001<br>United States</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-content">
+                        <h3>Call Us</h3>
+                        <p>+1 (234) 567-890<br>+1 (234) 567-891<br>Mon-Fri, 9AM-6PM EST</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-content">
+                        <h3>Email Us</h3>
+                        <p>contact@aerovista.com<br>support@aerovista.com<br>info@aerovista.com</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form glass-morphism">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>AeroVista.</h3>
+                <p>Making your dream travel come true with premium services and unforgettable experiences.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Travel St, New York</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 234 567 890</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@aerovista.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AeroVista. With 💕 By OG: Omkar Ghare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer integrity="sha512-dLvTPY6xbJZG8+DfXEmEVM1Y2QFDxWKWF/AhqBQc58KDZ4Q7pVJfWfIXDDydfzwUGR9kG2hhF3B64aSQGq14xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer integrity="sha512-16esztaSRplJROstbIIdwX3ZPL8ce6/gdd26IjtR2OLuy10dYcIqw1JVzM/hCnqKjuwDNt3r9kXc5irAmIX7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer integrity="sha512-P5S2avpzHr1e3wBJNe4r7P+fB1jvVLjG0SjKT1E3pXEkE6xaVSAhzn6A7LQA7SHa5vG6UxGCVW8v5WpWVUfLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer integrity="sha512-wGhYWC6qt3jZiR6eamtFSvymriETbR3TwESM+KCfyUpbIE+2ZFpc0j+51OxeHCJUcwyd9enmRXo9u1knU6Qnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
